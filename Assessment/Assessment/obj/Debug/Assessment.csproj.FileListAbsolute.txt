@@ -1,0 +1,10 @@
+H:\Programming\Assessment\Assessment\bin\Debug\Assessment.exe.config
+H:\Programming\Assessment\Assessment\bin\Debug\Assessment.exe
+H:\Programming\Assessment\Assessment\bin\Debug\Assessment.pdb
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.csprojAssemblyReference.cache
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.FrmGame.resources
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.Properties.Resources.resources
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.csproj.GenerateResource.cache
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.csproj.CoreCompileInputs.cache
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.exe
+H:\Programming\Assessment\Assessment\obj\Debug\Assessment.pdb
