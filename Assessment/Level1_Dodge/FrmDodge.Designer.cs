@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PnlGame = new System.Windows.Forms.Panel();
             this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -45,19 +44,10 @@
             this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrAnim = new System.Windows.Forms.Timer(this.components);
             this.TmrAnim1 = new System.Windows.Forms.Timer(this.components);
+            this.PnlGame = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.PnlGame.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PnlGame
-            // 
-            this.PnlGame.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.PnlGame.BackgroundImage = global::Level1_Dodge.Properties.Resources._2001_space_odyssey_800x450;
-            this.PnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PnlGame.Location = new System.Drawing.Point(12, 72);
-            this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(560, 390);
-            this.PnlGame.TabIndex = 0;
-            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
             // TmrPlanet
             // 
@@ -73,11 +63,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Haettenschweiler", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(170, 32);
+            this.label1.Location = new System.Drawing.Point(202, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 37);
+            this.label1.Size = new System.Drawing.Size(164, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "2001 A SPACE ARCADE";
+            this.label1.Text = "NAME IN PROG";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -176,6 +166,18 @@
             // 
             this.TmrAnim1.Tick += new System.EventHandler(this.TmrAnim1_Tick);
             // 
+            // PnlGame
+            // 
+            this.PnlGame.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.PnlGame.BackgroundImage = global::Level1_Dodge.Properties.Resources.bg;
+            this.PnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PnlGame.Controls.Add(this.label1);
+            this.PnlGame.Location = new System.Drawing.Point(0, 27);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(584, 435);
+            this.PnlGame.TabIndex = 0;
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
             // FrmDodge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,7 +191,6 @@
             this.Controls.Add(this.LblScore);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.PnlGame);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
@@ -201,6 +202,8 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyUp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.PnlGame.ResumeLayout(false);
+            this.PnlGame.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

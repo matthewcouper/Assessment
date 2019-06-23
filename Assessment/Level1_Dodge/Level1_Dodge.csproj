@@ -82,5 +82,8 @@
   <ItemGroup>
     <None Include="Resources\2001-space-odyssey-800x450.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

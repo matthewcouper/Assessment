@@ -67,10 +67,10 @@ namespace Level1_Dodge
 
         }
 
-        int x2 = 190, y2 = 270; //starting position of spaceship
+        int x2 = 260, y2 = 350; //starting position of spaceship
                                //Load our two images from the bin\debug folder
 
-        Image alien1 = Image.FromFile(Application.StartupPath + @"\alien2.png");
+        Image alien1 = Image.FromFile(Application.StartupPath + @"\player.png");
 
 
         private void FrmDodge_KeyDown(object sender, KeyEventArgs e)
@@ -246,7 +246,7 @@ namespace Level1_Dodge
         public FrmDodge()
         {
             InitializeComponent();
-            areaSpaceship = new Rectangle(x2, y2, 35, 30);//spaceship's rectangle	
+            areaSpaceship = new Rectangle(x2, y2, 40, 40);//spaceship's rectangle	
             //position the planets
             for (int i = 0; i < 7; i++)
             {
