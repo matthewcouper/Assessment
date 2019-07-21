@@ -15,15 +15,21 @@ namespace Level1_Dodge
     {
 
         Graphics g; // declare the graphics object
-        int x = 20, y = 20;// starting position of planet
+        int x = 20, y = -30;// starting position of planet
         Random speed = new Random();
         int[] planetSpeed = new int[7];
         int score = 0;
         int lives = 5;
         bool left, right, up, down;
-        // declare a rectangle to contain the spaceship and an area array to contain the planets
+        // declare a rectangle to contain the graphics and an area array to contain the planets
         Rectangle areaSpaceship;
+        Rectangle areaCollision;
+        Rectangle areaOxygen = new Rectangle(0, 0, 40, 50);
         Rectangle[] area = new Rectangle[7];//area[0] to area[6]
+        Random rand = new Random();
+
+
+
 
 
         private void TmrPlanet_Tick(object sender, EventArgs e)
@@ -34,43 +40,61 @@ namespace Level1_Dodge
                 //if spaceship collides with any planet lose a life and move planet to the top of the panel
                 if (area[i].IntersectsWith(areaSpaceship))
                 {
-                    area[i].Y = 20;
+                    area[i].Y = -30;
                     lives -= 1; // reduce lives by 1
                                 //display the number of lives on the form
                     TxtLives.Text = lives.ToString();
 
+                    player = Image.FromFile("collision.png");
+                    TxtLives.ForeColor = Color.Red;
+                    lblOx.ForeColor = Color.White;
+
+
                     CheckLives();
+
                 }
+
                 if (area[i].Y > PnlGame.Height)
                 {
                     area[i].Y = 20;
                     score += 1; // add 1 to score
                     LblScore1.Text = score.ToString();//display score on the form 
+                    LblScore1.ForeColor = Color.Green;
                 }
 
             }
+
             PnlGame.Invalidate();
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
         }
+
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
 
             //get the methods from the graphic's class to paint on the panel
             g = e.Graphics;
-            //use the DrawImage method to draw the spaceship on the panel
-            g.DrawImage(alien1, areaSpaceship);
+            //use the DrawImage method to draw the graphics on the panel
+            g.DrawImage(player, areaSpaceship);
+            g.DrawImage(collision, areaCollision);
+            g.DrawImage(oxygen, areaOxygen);
+       
             for (int i = 0; i <= 6; i++)
             { 
                 g.DrawImage(planet1, area[i]);
+                
+
             }
+
 
         }
 
         int x2 = 260, y2 = 350; //starting position of spaceship
                                //Load our two images from the bin\debug folder
 
-        Image alien1 = Image.FromFile(Application.StartupPath + @"\player.png");
+        Image player = Image.FromFile(Application.StartupPath + @"\player.png");
+        Image collision = Image.FromFile(Application.StartupPath + @"\collision.png");
+        Image oxygen = Image.FromFile(Application.StartupPath + @"\oxygen.png");
 
 
         private void FrmDodge_KeyDown(object sender, KeyEventArgs e)
@@ -101,7 +125,7 @@ namespace Level1_Dodge
                 }
                 else
                 {
-                    areaSpaceship.X -= 5; //else move 5 to the left
+                    areaSpaceship.X -= 7; //else move 5 to the left
                 }
             }
 
@@ -113,7 +137,7 @@ namespace Level1_Dodge
                 }
                 else
                 {
-                    areaSpaceship.X += 5;
+                    areaSpaceship.X += 7;
                 }
             }
 
@@ -125,7 +149,7 @@ namespace Level1_Dodge
                 }
                 else
                 {
-                    areaSpaceship.Y -= 5; //else move 5 to the left
+                    areaSpaceship.Y -= 7; //else move 5 to the left
                 }
             }
 
@@ -137,13 +161,13 @@ namespace Level1_Dodge
                     }
                     else
                     {
-                        areaSpaceship.Y += 10; //else move 5 to the left
+                        areaSpaceship.Y += 7; //else move 5 to the left
                     }
                 }
 
+        
 
 
-            
 
 
         }
@@ -156,6 +180,9 @@ namespace Level1_Dodge
         Image[] images = new Image[10];
         int count;
         Image planet1;
+     
+        
+     
 
 
         private void MnuStart_Click(object sender, EventArgs e)
@@ -165,6 +192,11 @@ namespace Level1_Dodge
             TmrPlanet.Enabled = true; //start the timer to move the planets
             TmrShip.Enabled = true; //start the timer to move the spaceship
             TmrAnim.Enabled = true;//start the timer to animate the planets
+            lblOx.Text = "20"; //start from 20 seconds
+            TmrOx.Start();
+
+
+           
 
         }
 
@@ -172,6 +204,7 @@ namespace Level1_Dodge
         {
             TmrShip.Enabled = false;
             TmrPlanet.Enabled = false;
+            TmrOx.Stop();
 
         }
 
@@ -214,22 +247,70 @@ namespace Level1_Dodge
 
             Invalidate();   //refreshes screen otherwise image won't change
 
-        }
-
-        private void LblScore1_TextChanged(object sender, EventArgs e)
-        {
+           
 
         }
 
-        private void TxtLives_TextChanged(object sender, EventArgs e)
+        private void TmrOx_Tick(object sender, EventArgs e)
         {
+            int timeLeft = int.Parse(lblOx.Text);  //getting the last value (the one from the label)
+            timeLeft -= 1; //subtracting 1
+            lblOx.Text = timeLeft.ToString();  //adding it back to the label. 
+            if (int.Parse(lblOx.Text) == 5)
+            {
+                lblOx.ForeColor = Color.Red;
+            }
+            if (int.Parse(lblOx.Text) == 4)
+            {
+                lblOx.ForeColor = Color.Red;
+            }
+            if (int.Parse(lblOx.Text) == 3)
+            {
+                lblOx.ForeColor = Color.Red;
+            }
+            if (int.Parse(lblOx.Text) == 2)
+            {
+                lblOx.ForeColor = Color.Red;
+            }
+            if (int.Parse(lblOx.Text) == 1)
+            {
+                lblOx.ForeColor = Color.Red;
+            }
+            if (int.Parse(lblOx.Text) == 0)  //if the countdown reaches '0', we stop it
+            {
+                TmrOx.Stop();
+                TmrPlanet.Enabled = false;
+                TmrShip.Enabled = false;
+                MessageBox.Show("Game Over \n \n In space no one can hear you scream.");
+            }
 
+        
+
+
+
+
+        }
+
+
+        private void TmrOxG_Tick(object sender, EventArgs e)
+        {
+            areaOxygen.X = rand.Next(450);
+            areaOxygen.Y = rand.Next(350);
+        }
+
+     
+
+        private void TmrCol_Tick(object sender, EventArgs e)
+        {
+            player = Image.FromFile("player.png");
+            TxtLives.ForeColor = Color.White;
+            LblScore1.ForeColor = Color.White;
         }
 
         private void TmrAnim1_Tick(object sender, EventArgs e)
         {
             //we cycle through each element of the images array creating the animation
-            alien1 = images[count];
+            player = images[count];
             count++;
             if (count > 9)
                 count = 1;
@@ -238,15 +319,12 @@ namespace Level1_Dodge
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         public FrmDodge()
         {
             InitializeComponent();
-            areaSpaceship = new Rectangle(x2, y2, 40, 40);//spaceship's rectangle	
+            areaSpaceship = new Rectangle(x2, y2, 30, 35);//spaceship's rectangle	
             //position the planets
             for (int i = 0; i < 7; i++)
             {
@@ -263,7 +341,8 @@ namespace Level1_Dodge
             {
                 TmrPlanet.Enabled = false;
                 TmrShip.Enabled = false;
-                MessageBox.Show("Game Over");
+                TmrOx.Enabled = false;
+                MessageBox.Show("Game Over \n \n In space no one can hear you scream.");
 
             }
         }
@@ -277,7 +356,7 @@ namespace Level1_Dodge
             }
             planet1 = images[1];
 
-            MessageBox.Show("Use the left and right arrow keys to move the spaceship. \n Don't get hit by the planets! \n Every planet that goes past scores a point. \n If a planet hits a spaceship a life is lost!", "Game Instructions");
+            MessageBox.Show("Space is scary. \n You awake without your ship and your oxygen levels are rapidly \n depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move)", "LOST");
             TxtName.Focus();
             MnuStart.Enabled = false;
         }
