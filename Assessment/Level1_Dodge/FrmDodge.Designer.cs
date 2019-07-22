@@ -190,9 +190,9 @@
             this.lblOx.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOx.Location = new System.Drawing.Point(507, 188);
             this.lblOx.Name = "lblOx";
-            this.lblOx.Size = new System.Drawing.Size(45, 40);
+            this.lblOx.Size = new System.Drawing.Size(40, 40);
             this.lblOx.TabIndex = 11;
-            this.lblOx.Text = "20";
+            this.lblOx.Text = "10";
             // 
             // LblScore1
             // 

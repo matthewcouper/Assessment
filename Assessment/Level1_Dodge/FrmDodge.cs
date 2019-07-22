@@ -24,6 +24,7 @@ namespace Level1_Dodge
         // declare a rectangle to contain the graphics and an area array to contain the planets
         Rectangle areaSpaceship;
         Rectangle areaCollision;
+        Rectangle areaOxygenInc;
         Rectangle areaOxygen = new Rectangle(0, 0, 35, 45);
         Rectangle[] area = new Rectangle[7];//area[0] to area[6]
         Random rand = new Random();
@@ -46,8 +47,7 @@ namespace Level1_Dodge
                     TxtLives.Text = lives.ToString();
 
                     player = Image.FromFile("collision.png");
-                    TxtLives.ForeColor = Color.Red;
-                    lblOx.ForeColor = Color.White;
+                    
 
 
                     CheckLives();
@@ -64,6 +64,9 @@ namespace Level1_Dodge
 
                 if (areaSpaceship.IntersectsWith(areaOxygen))
                 {
+
+                    player = Image.FromFile("oxygeninc.png");
+
                     areaOxygen.X = rand.Next(450);
                     areaOxygen.Y = rand.Next(350);
 
@@ -89,6 +92,7 @@ namespace Level1_Dodge
             //use the DrawImage method to draw the graphics on the panel
             g.DrawImage(player, areaSpaceship);
             g.DrawImage(collision, areaCollision);
+            g.DrawImage(oxygeninc, areaOxygenInc);
             g.DrawImage(oxygen, areaOxygen);
        
             for (int i = 0; i <= 6; i++)
@@ -102,10 +106,11 @@ namespace Level1_Dodge
         }
 
         int x2 = 260, y2 = 350; //starting position of spaceship
-                               //Load our two images from the bin\debug folder
-
+                              
+        //Load our images from the bin\debug folder
         Image player = Image.FromFile(Application.StartupPath + @"\player.png");
         Image collision = Image.FromFile(Application.StartupPath + @"\collision.png");
+        Image oxygeninc = Image.FromFile(Application.StartupPath + @"\oxygeninc.png");
         Image oxygen = Image.FromFile(Application.StartupPath + @"\oxygen.png");
 
 
@@ -204,7 +209,7 @@ namespace Level1_Dodge
             TmrPlanet.Enabled = true; //start the timer to move the planets
             TmrShip.Enabled = true; //start the timer to move the spaceship
             TmrAnim.Enabled = true;//start the timer to animate the planets
-            lblOx.Text = "10"; //start from 20 seconds
+            lblOx.Text = "10"; //start from 10 seconds
             TmrOx.Start();
 
 
@@ -264,11 +269,18 @@ namespace Level1_Dodge
         }
 
         private void TmrOx_Tick(object sender, EventArgs e)
+
         {
             int timeLeft = int.Parse(lblOx.Text);  //getting the last value (the one from the label)
             timeLeft -= 1; //subtracting 1
             lblOx.Text = timeLeft.ToString();  //adding it back to the label. 
-          
+
+            lblOx.ForeColor = Color.White;
+            TxtLives.ForeColor = Color.White;
+            LblScore1.ForeColor = Color.White;
+            lblOx.ForeColor = Color.White;
+            player = Image.FromFile("player.png");
+
             if (int.Parse(lblOx.Text) == 5)
             {
                 lblOx.ForeColor = Color.Red;
@@ -307,8 +319,7 @@ namespace Level1_Dodge
         private void TmrCol_Tick(object sender, EventArgs e)
         {
             player = Image.FromFile("player.png");
-            TxtLives.ForeColor = Color.White;
-            LblScore1.ForeColor = Color.White;
+        
         }
 
         private void TmrAnim1_Tick(object sender, EventArgs e)

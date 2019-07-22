@@ -88,5 +88,8 @@
   <ItemGroup>
     <None Include="bin\Debug\collision.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\oxygeninc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
