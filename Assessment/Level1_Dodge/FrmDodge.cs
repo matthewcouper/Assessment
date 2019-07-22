@@ -24,7 +24,7 @@ namespace Level1_Dodge
         // declare a rectangle to contain the graphics and an area array to contain the planets
         Rectangle areaSpaceship;
         Rectangle areaCollision;
-        Rectangle areaOxygen = new Rectangle(0, 0, 40, 50);
+        Rectangle areaOxygen = new Rectangle(0, 0, 35, 45);
         Rectangle[] area = new Rectangle[7];//area[0] to area[6]
         Random rand = new Random();
 
@@ -61,6 +61,18 @@ namespace Level1_Dodge
                     LblScore1.Text = score.ToString();//display score on the form 
                     LblScore1.ForeColor = Color.Green;
                 }
+
+                if (areaSpaceship.IntersectsWith(areaOxygen))
+                {
+                    areaOxygen.X = rand.Next(450);
+                    areaOxygen.Y = rand.Next(350);
+
+                    int timeLeft = int.Parse(lblOx.Text);  //getting the last value (the one from the label)
+                    timeLeft += 5; //adding 5
+                    lblOx.Text = timeLeft.ToString();  //adding it back to the label. 
+                }
+            
+                    
 
             }
 
@@ -192,7 +204,7 @@ namespace Level1_Dodge
             TmrPlanet.Enabled = true; //start the timer to move the planets
             TmrShip.Enabled = true; //start the timer to move the spaceship
             TmrAnim.Enabled = true;//start the timer to animate the planets
-            lblOx.Text = "20"; //start from 20 seconds
+            lblOx.Text = "10"; //start from 20 seconds
             TmrOx.Start();
 
 
@@ -256,6 +268,7 @@ namespace Level1_Dodge
             int timeLeft = int.Parse(lblOx.Text);  //getting the last value (the one from the label)
             timeLeft -= 1; //subtracting 1
             lblOx.Text = timeLeft.ToString();  //adding it back to the label. 
+          
             if (int.Parse(lblOx.Text) == 5)
             {
                 lblOx.ForeColor = Color.Red;
@@ -281,7 +294,7 @@ namespace Level1_Dodge
                 TmrOx.Stop();
                 TmrPlanet.Enabled = false;
                 TmrShip.Enabled = false;
-                MessageBox.Show("Game Over \n \n In space no one can hear you scream.");
+                MessageBox.Show("Game Over \n \n Body of Astronaut #237 found in the emptiness of space. \n Cause of death: Suffocation. ");
             }
 
         
@@ -290,15 +303,6 @@ namespace Level1_Dodge
 
 
         }
-
-
-        private void TmrOxG_Tick(object sender, EventArgs e)
-        {
-            areaOxygen.X = rand.Next(450);
-            areaOxygen.Y = rand.Next(350);
-        }
-
-     
 
         private void TmrCol_Tick(object sender, EventArgs e)
         {
@@ -325,7 +329,9 @@ namespace Level1_Dodge
         {
             InitializeComponent();
             areaSpaceship = new Rectangle(x2, y2, 30, 35);//spaceship's rectangle	
-            //position the planets
+                                                         //position the planets
+            areaOxygen.X = rand.Next(450);
+            areaOxygen.Y = rand.Next(350);
             for (int i = 0; i < 7; i++)
             {
                 area[i] = new Rectangle(x + 70 * i, y, 30, 30);
@@ -342,7 +348,7 @@ namespace Level1_Dodge
                 TmrPlanet.Enabled = false;
                 TmrShip.Enabled = false;
                 TmrOx.Enabled = false;
-                MessageBox.Show("Game Over \n \n In space no one can hear you scream.");
+                MessageBox.Show("Game Over \n \n Body of Astronaut #237 found in the emptiness of space. \n Cause of death: Severe meteoroid collision.");
 
             }
         }
@@ -356,7 +362,7 @@ namespace Level1_Dodge
             }
             planet1 = images[1];
 
-            MessageBox.Show("Space is scary. \n You awake without your ship and your oxygen levels are rapidly \n depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move)", "LOST");
+            MessageBox.Show("Space is scary. \n \n You, Astronaut #237, awake without your ship and your oxygen levels are rapidly depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move)", "LOST");
             TxtName.Focus();
             MnuStart.Enabled = false;
         }
