@@ -113,6 +113,14 @@ namespace Level1_Dodge
         Image oxygeninc = Image.FromFile(Application.StartupPath + @"\oxygeninc.png");
         Image oxygen = Image.FromFile(Application.StartupPath + @"\oxygen.png");
 
+        Image[] images1 = new Image[10];
+        int count1;
+        Image oxygen1;
+
+        Image[] images = new Image[10];
+        int count;
+        Image planet1;
+
 
         private void FrmDodge_KeyDown(object sender, KeyEventArgs e)
         {
@@ -194,15 +202,7 @@ namespace Level1_Dodge
 
         }
 
-        Image[] images = new Image[10];
-        int count;
-        Image planet1;
-     
-        
-     
-
-
-        private void MnuStart_Click(object sender, EventArgs e)
+  private void MnuStart_Click(object sender, EventArgs e)
         {
             score = 0; //when game starts set the score to 0
             LblScore1.Text = score.ToString(); //display the score on the form

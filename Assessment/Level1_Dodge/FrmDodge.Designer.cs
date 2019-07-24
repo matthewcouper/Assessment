@@ -237,7 +237,7 @@
             // 
             // TmrOx
             // 
-            this.TmrOx.Interval = 1000;
+            this.TmrOx.Interval = 500;
             this.TmrOx.Tick += new System.EventHandler(this.TmrOx_Tick);
             // 
             // FrmDodge

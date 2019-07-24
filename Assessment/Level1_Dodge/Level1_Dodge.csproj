@@ -89,6 +89,15 @@
     <None Include="bin\Debug\collision.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\oxygen1.gif" />
+    <Content Include="bin\Debug\oxygen2.gif" />
+    <Content Include="bin\Debug\oxygen3.gif" />
+    <Content Include="bin\Debug\oxygen4.gif" />
+    <Content Include="bin\Debug\oxygen5.gif" />
+    <Content Include="bin\Debug\oxygen6.gif" />
+    <Content Include="bin\Debug\oxygen7.gif" />
+    <Content Include="bin\Debug\oxygen8.gif" />
+    <Content Include="bin\Debug\oxygen9.gif" />
     <Content Include="bin\Debug\oxygeninc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
