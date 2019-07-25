@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
-            this.TxtName = new System.Windows.Forms.TextBox();
             this.LblScore = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrAnim = new System.Windows.Forms.Timer(this.components);
             this.TmrAnim1 = new System.Windows.Forms.Timer(this.components);
+            this.TmrCol = new System.Windows.Forms.Timer(this.components);
+            this.TmrOx = new System.Windows.Forms.Timer(this.components);
+            this.TmrOxG = new System.Windows.Forms.Timer(this.components);
             this.PnlGame = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.TxtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOx = new System.Windows.Forms.Label();
             this.LblScore1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtLives = new System.Windows.Forms.TextBox();
-            this.TmrCol = new System.Windows.Forms.Timer(this.components);
-            this.TmrOx = new System.Windows.Forms.Timer(this.components);
-            this.TmrOxG = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
             this.SuspendLayout();
@@ -62,17 +62,6 @@
             // 
             this.TmrShip.Interval = 50;
             this.TmrShip.Tick += new System.EventHandler(this.TmrShip_Tick);
-            // 
-            // TxtName
-            // 
-            this.TxtName.BackColor = System.Drawing.SystemColors.MenuText;
-            this.TxtName.Font = new System.Drawing.Font("Haettenschweiler", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtName.ForeColor = System.Drawing.Color.Silver;
-            this.TxtName.Location = new System.Drawing.Point(27, 375);
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(100, 25);
-            this.TxtName.TabIndex = 3;
-            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // LblScore
             // 
@@ -115,9 +104,16 @@
             this.TmrAnim.Interval = 40;
             this.TmrAnim.Tick += new System.EventHandler(this.TmrAnim_Tick);
             // 
-            // TmrAnim1
+            // TmrCol
             // 
-            this.TmrAnim1.Tick += new System.EventHandler(this.TmrAnim1_Tick);
+            this.TmrCol.Enabled = true;
+            this.TmrCol.Interval = 1000;
+            this.TmrCol.Tick += new System.EventHandler(this.TmrCol_Tick);
+            // 
+            // TmrOx
+            // 
+            this.TmrOx.Interval = 500;
+            this.TmrOx.Tick += new System.EventHandler(this.TmrOx_Tick);
             // 
             // PnlGame
             // 
@@ -160,6 +156,17 @@
             this.label4.Size = new System.Drawing.Size(45, 21);
             this.label4.TabIndex = 14;
             this.label4.Text = "SCORE";
+            // 
+            // TxtName
+            // 
+            this.TxtName.BackColor = System.Drawing.SystemColors.MenuText;
+            this.TxtName.Font = new System.Drawing.Font("Haettenschweiler", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtName.ForeColor = System.Drawing.Color.Silver;
+            this.TxtName.Location = new System.Drawing.Point(27, 375);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(100, 25);
+            this.TxtName.TabIndex = 3;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // label3
             // 
@@ -228,17 +235,6 @@
             this.TxtLives.Size = new System.Drawing.Size(21, 45);
             this.TxtLives.TabIndex = 6;
             this.TxtLives.Text = "5";
-            // 
-            // TmrCol
-            // 
-            this.TmrCol.Enabled = true;
-            this.TmrCol.Interval = 1000;
-            this.TmrCol.Tick += new System.EventHandler(this.TmrCol_Tick);
-            // 
-            // TmrOx
-            // 
-            this.TmrOx.Interval = 500;
-            this.TmrOx.Tick += new System.EventHandler(this.TmrOx_Tick);
             // 
             // FrmDodge
             // 

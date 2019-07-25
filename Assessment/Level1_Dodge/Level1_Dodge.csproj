@@ -98,7 +98,9 @@
     <Content Include="bin\Debug\oxygen7.gif" />
     <Content Include="bin\Debug\oxygen8.gif" />
     <Content Include="bin\Debug\oxygen9.gif" />
+    <Content Include="bin\Debug\oxygengif.gif" />
     <Content Include="bin\Debug\oxygeninc.png" />
+    <None Include="Resources\oxygengif.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

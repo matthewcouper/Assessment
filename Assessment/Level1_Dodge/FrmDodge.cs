@@ -111,11 +111,7 @@ namespace Level1_Dodge
         Image player = Image.FromFile(Application.StartupPath + @"\player.png");
         Image collision = Image.FromFile(Application.StartupPath + @"\collision.png");
         Image oxygeninc = Image.FromFile(Application.StartupPath + @"\oxygeninc.png");
-        Image oxygen = Image.FromFile(Application.StartupPath + @"\oxygen.png");
-
-        Image[] images1 = new Image[10];
-        int count1;
-        Image oxygen1;
+        Image oxygen = Image.FromFile(Application.StartupPath + @"\oxygen1.gif");
 
         Image[] images = new Image[10];
         int count;
@@ -322,17 +318,7 @@ namespace Level1_Dodge
         
         }
 
-        private void TmrAnim1_Tick(object sender, EventArgs e)
-        {
-            //we cycle through each element of the images array creating the animation
-            oxygen = images1[count1];
-            count1++;
-            if (count1 > 9)
-                count1 = 1;
-
-            Invalidate();   //refreshes screen otherwise image won't change
-
-        }
+        
 
      
 
@@ -372,13 +358,6 @@ namespace Level1_Dodge
                 images[i] = Image.FromFile(Application.StartupPath + @"\planet" + i.ToString() + ".gif");
             }
             planet1 = images[1];
-
-            for (int i = 1; i <= 9; i++)
-            {
-                images1[i] = Image.FromFile(Application.StartupPath + @"\oxygen" + i.ToString() + ".gif");
-            }
-            oxygen1= images1[1];
-
 
             MessageBox.Show("Space is scary. \n \n You, Astronaut #237, awake without your ship and your oxygen levels are rapidly depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move)", "LOST");
             TxtName.Focus();

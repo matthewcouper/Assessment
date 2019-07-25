@@ -8,3 +8,6 @@ H:\Programming\Assessment\Assessment\obj\Debug\Assessment.csproj.GenerateResourc
 H:\Programming\Assessment\Assessment\obj\Debug\Assessment.csproj.CoreCompileInputs.cache
 H:\Programming\Assessment\Assessment\obj\Debug\Assessment.exe
 H:\Programming\Assessment\Assessment\obj\Debug\Assessment.pdb
+C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\bin\Debug\Assessment.exe.config
+C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\obj\Debug\Assessment.exe
+C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\obj\Debug\Assessment.pdb
