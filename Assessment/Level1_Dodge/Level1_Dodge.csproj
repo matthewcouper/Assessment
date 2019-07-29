@@ -89,6 +89,11 @@
     <None Include="bin\Debug\collision.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\enemy.png" />
+    <Content Include="bin\Debug\enemy1.gif" />
+    <Content Include="bin\Debug\enemy2.gif" />
+    <Content Include="bin\Debug\enemy3.gif" />
+    <Content Include="bin\Debug\enemy4.gif" />
     <Content Include="bin\Debug\oxygen1.gif" />
     <Content Include="bin\Debug\oxygen2.gif" />
     <Content Include="bin\Debug\oxygen3.gif" />
