@@ -41,6 +41,7 @@
             this.TmrOx = new System.Windows.Forms.Timer(this.components);
             this.TmrOxG = new System.Windows.Forms.Timer(this.components);
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
@@ -52,6 +53,7 @@
             this.TxtLives = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TmrPlanet
@@ -129,11 +131,23 @@
             this.PnlGame.Controls.Add(this.LblScore1);
             this.PnlGame.Controls.Add(this.label1);
             this.PnlGame.Controls.Add(this.TxtLives);
+            this.PnlGame.Controls.Add(this.pictureBox1);
             this.PnlGame.Location = new System.Drawing.Point(0, 27);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(584, 435);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Level1_Dodge.Properties.Resources.circle1;
+            this.pictureBox1.Location = new System.Drawing.Point(480, 199);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
@@ -184,7 +198,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Haettenschweiler", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(490, 167);
+            this.label2.Location = new System.Drawing.Point(479, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 21);
             this.label2.TabIndex = 12;
@@ -195,7 +209,7 @@
             this.lblOx.AutoSize = true;
             this.lblOx.BackColor = System.Drawing.Color.Transparent;
             this.lblOx.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOx.Location = new System.Drawing.Point(507, 188);
+            this.lblOx.Location = new System.Drawing.Point(498, 216);
             this.lblOx.Name = "lblOx";
             this.lblOx.Size = new System.Drawing.Size(40, 40);
             this.lblOx.TabIndex = 11;
@@ -257,6 +271,7 @@
             this.menuStrip1.PerformLayout();
             this.PnlGame.ResumeLayout(false);
             this.PnlGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +300,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer TmrOxG;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

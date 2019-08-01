@@ -11,3 +11,6 @@ H:\Programming\Assessment\Assessment\obj\Debug\Assessment.pdb
 C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\bin\Debug\Assessment.exe.config
 C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\obj\Debug\Assessment.exe
 C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\obj\Debug\Assessment.pdb
+C:\Users\matthewcouper\Source\Repos\Assessment5\Assessment\Assessment\bin\Debug\Assessment.exe.config
+C:\Users\matthewcouper\Source\Repos\Assessment5\Assessment\Assessment\obj\Debug\Assessment.exe
+C:\Users\matthewcouper\Source\Repos\Assessment5\Assessment\Assessment\obj\Debug\Assessment.pdb

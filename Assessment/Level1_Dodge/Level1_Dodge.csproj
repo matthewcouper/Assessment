@@ -105,6 +105,8 @@
     <Content Include="bin\Debug\oxygen9.gif" />
     <Content Include="bin\Debug\oxygengif.gif" />
     <Content Include="bin\Debug\oxygeninc.png" />
+    <None Include="Resources\circle1.png" />
+    <None Include="Resources\circle.png" />
     <None Include="Resources\oxygengif.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
