@@ -83,6 +83,16 @@ namespace Level1_Dodge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_sky_pixel_animation {
+            get {
+                object obj = ResourceManager.GetObject("blue_sky_pixel_animation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle {
             get {
                 object obj = ResourceManager.GetObject("circle", resourceCulture);
@@ -116,6 +126,26 @@ namespace Level1_Dodge.Properties {
         internal static System.Drawing.Bitmap oxygengif {
             get {
                 object obj = ResourceManager.GetObject("oxygengif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TITLE {
+            get {
+                object obj = ResourceManager.GetObject("TITLE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TITLE1 {
+            get {
+                object obj = ResourceManager.GetObject("TITLE1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

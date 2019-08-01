@@ -41,7 +41,7 @@
             this.TmrOx = new System.Windows.Forms.Timer(this.components);
             this.TmrOxG = new System.Windows.Forms.Timer(this.components);
             this.PnlGame = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
@@ -49,10 +49,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblOx = new System.Windows.Forms.Label();
             this.LblScore1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.TxtLives = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +123,7 @@
             this.PnlGame.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.PnlGame.BackgroundImage = global::Level1_Dodge.Properties.Resources.bg;
             this.PnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PnlGame.Controls.Add(this.pictureBox2);
             this.PnlGame.Controls.Add(this.label5);
             this.PnlGame.Controls.Add(this.label4);
             this.PnlGame.Controls.Add(this.TxtName);
@@ -129,7 +131,6 @@
             this.PnlGame.Controls.Add(this.label2);
             this.PnlGame.Controls.Add(this.lblOx);
             this.PnlGame.Controls.Add(this.LblScore1);
-            this.PnlGame.Controls.Add(this.label1);
             this.PnlGame.Controls.Add(this.TxtLives);
             this.PnlGame.Controls.Add(this.pictureBox1);
             this.PnlGame.Location = new System.Drawing.Point(0, 27);
@@ -138,16 +139,16 @@
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Level1_Dodge.Properties.Resources.circle1;
-            this.pictureBox1.Location = new System.Drawing.Point(480, 199);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Level1_Dodge.Properties.Resources.TITLE1;
+            this.pictureBox2.Location = new System.Drawing.Point(242, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(91, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -226,19 +227,6 @@
             this.LblScore1.TabIndex = 9;
             this.LblScore1.Text = "0";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Haettenschweiler", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(257, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LOST";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // TxtLives
             // 
             this.TxtLives.BackColor = System.Drawing.Color.Black;
@@ -249,6 +237,17 @@
             this.TxtLives.Size = new System.Drawing.Size(21, 45);
             this.TxtLives.TabIndex = 6;
             this.TxtLives.Text = "5";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Level1_Dodge.Properties.Resources.circle1;
+            this.pictureBox1.Location = new System.Drawing.Point(480, 199);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmDodge
             // 
@@ -271,6 +270,7 @@
             this.menuStrip1.PerformLayout();
             this.PnlGame.ResumeLayout(false);
             this.PnlGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,7 +282,6 @@
         private System.Windows.Forms.Panel PnlGame;
         private System.Windows.Forms.Timer TmrPlanet;
         private System.Windows.Forms.Timer TmrShip;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label LblScore;
         private System.Windows.Forms.TextBox TxtLives;
@@ -301,6 +300,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer TmrOxG;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
