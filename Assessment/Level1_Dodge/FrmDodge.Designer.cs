@@ -138,10 +138,10 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Level1_Dodge.Properties.Resources.TITLE21;
+            this.pictureBox2.Image = global::Level1_Dodge.Properties.Resources.TITLE22;
             this.pictureBox2.Location = new System.Drawing.Point(242, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(91, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
