@@ -123,9 +123,29 @@ namespace Level1_Dodge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap heart {
+            get {
+                object obj = ResourceManager.GetObject("heart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap oxygengif {
             get {
                 object obj = ResourceManager.GetObject("oxygengif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,26 @@ namespace Level1_Dodge.Properties {
         internal static System.Drawing.Bitmap TITLE1 {
             get {
                 object obj = ResourceManager.GetObject("TITLE1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TITLE2 {
+            get {
+                object obj = ResourceManager.GetObject("TITLE2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TITLE21 {
+            get {
+                object obj = ResourceManager.GetObject("TITLE21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

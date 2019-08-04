@@ -47,6 +47,7 @@ namespace Level1_Dodge
                     TxtLives.Text = lives.ToString();
 
                     player = Image.FromFile("collision.png");
+                    heart.Image = Image.FromFile("heartdmg.png");
                     
 
 
@@ -323,7 +324,8 @@ namespace Level1_Dodge
         private void TmrCol_Tick(object sender, EventArgs e)
         {
             player = Image.FromFile("player.png");
-        
+            heart.Image = Image.FromFile("heart.png");
+
         }
 
         

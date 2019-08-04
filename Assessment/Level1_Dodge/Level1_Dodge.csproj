@@ -94,6 +94,8 @@
     <Content Include="bin\Debug\enemy2.gif" />
     <Content Include="bin\Debug\enemy3.gif" />
     <Content Include="bin\Debug\enemy4.gif" />
+    <Content Include="bin\Debug\heart.png" />
+    <Content Include="bin\Debug\heartdmg.png" />
     <Content Include="bin\Debug\oxygen1.gif" />
     <Content Include="bin\Debug\oxygen2.gif" />
     <Content Include="bin\Debug\oxygen3.gif" />
@@ -105,6 +107,10 @@
     <Content Include="bin\Debug\oxygen9.gif" />
     <Content Include="bin\Debug\oxygengif.gif" />
     <Content Include="bin\Debug\oxygeninc.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\TITLE21.png" />
+    <None Include="Resources\TITLE2.png" />
     <None Include="Resources\TITLE1.png" />
     <None Include="Resources\TITLE.png" />
     <None Include="Resources\blue_sky_pixel_animation.gif" />

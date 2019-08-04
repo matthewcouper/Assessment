@@ -33,7 +33,6 @@
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
             this.LblScore = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrAnim = new System.Windows.Forms.Timer(this.components);
             this.TmrAnim1 = new System.Windows.Forms.Timer(this.components);
@@ -41,18 +40,20 @@
             this.TmrOx = new System.Windows.Forms.Timer(this.components);
             this.TmrOxG = new System.Windows.Forms.Timer(this.components);
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.heart = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOx = new System.Windows.Forms.Label();
             this.LblScore1 = new System.Windows.Forms.TextBox();
             this.TxtLives = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.heart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -86,19 +87,11 @@
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // MnuStart
-            // 
-            this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuStart.Name = "MnuStart";
-            this.MnuStart.Size = new System.Drawing.Size(43, 20);
-            this.MnuStart.Text = "Start";
-            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
-            // 
             // MnuStop
             // 
             this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
             this.MnuStop.Name = "MnuStop";
-            this.MnuStop.Size = new System.Drawing.Size(43, 20);
+            this.MnuStop.Size = new System.Drawing.Size(43, 88);
             this.MnuStop.Text = "Stop";
             this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
@@ -123,11 +116,11 @@
             this.PnlGame.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.PnlGame.BackgroundImage = global::Level1_Dodge.Properties.Resources.bg;
             this.PnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PnlGame.Controls.Add(this.heart);
             this.PnlGame.Controls.Add(this.pictureBox2);
             this.PnlGame.Controls.Add(this.label5);
             this.PnlGame.Controls.Add(this.label4);
             this.PnlGame.Controls.Add(this.TxtName);
-            this.PnlGame.Controls.Add(this.label3);
             this.PnlGame.Controls.Add(this.label2);
             this.PnlGame.Controls.Add(this.lblOx);
             this.PnlGame.Controls.Add(this.LblScore1);
@@ -139,13 +132,24 @@
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
+            // heart
+            // 
+            this.heart.BackColor = System.Drawing.Color.Transparent;
+            this.heart.Image = global::Level1_Dodge.Properties.Resources.heart;
+            this.heart.Location = new System.Drawing.Point(23, 236);
+            this.heart.Name = "heart";
+            this.heart.Size = new System.Drawing.Size(29, 27);
+            this.heart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.heart.TabIndex = 18;
+            this.heart.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Level1_Dodge.Properties.Resources.TITLE1;
+            this.pictureBox2.Image = global::Level1_Dodge.Properties.Resources.TITLE21;
             this.pictureBox2.Location = new System.Drawing.Point(242, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(91, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -182,17 +186,6 @@
             this.TxtName.Size = new System.Drawing.Size(100, 25);
             this.TxtName.TabIndex = 3;
             this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Haettenschweiler", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(422, 403);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 21);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "LIVES";
             // 
             // label2
             // 
@@ -232,7 +225,7 @@
             this.TxtLives.BackColor = System.Drawing.Color.Black;
             this.TxtLives.Font = new System.Drawing.Font("Haettenschweiler", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLives.ForeColor = System.Drawing.Color.White;
-            this.TxtLives.Location = new System.Drawing.Point(430, 357);
+            this.TxtLives.Location = new System.Drawing.Point(27, 190);
             this.TxtLives.Name = "TxtLives";
             this.TxtLives.Size = new System.Drawing.Size(21, 45);
             this.TxtLives.TabIndex = 6;
@@ -248,6 +241,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            // 
+            // MnuStart
+            // 
+            this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStart.Name = "MnuStart";
+            this.MnuStart.Size = new System.Drawing.Size(43, 20);
+            this.MnuStart.Text = "Start";
+            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
             // 
             // FrmDodge
             // 
@@ -270,6 +271,7 @@
             this.menuStrip1.PerformLayout();
             this.PnlGame.ResumeLayout(false);
             this.PnlGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.heart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -296,11 +298,11 @@
         private System.Windows.Forms.Timer TmrOx;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer TmrOxG;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox heart;
     }
 }
 
