@@ -33,7 +33,6 @@
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
             this.LblScore = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrAnim = new System.Windows.Forms.Timer(this.components);
             this.TmrAnim1 = new System.Windows.Forms.Timer(this.components);
             this.TmrCol = new System.Windows.Forms.Timer(this.components);
@@ -51,6 +50,7 @@
             this.TxtLives = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heart)).BeginInit();
@@ -86,14 +86,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(584, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // MnuStop
-            // 
-            this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuStop.Name = "MnuStop";
-            this.MnuStop.Size = new System.Drawing.Size(43, 88);
-            this.MnuStop.Text = "Stop";
-            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
             // TmrAnim
             // 
@@ -245,10 +237,20 @@
             // MnuStart
             // 
             this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStart.Image = global::Level1_Dodge.Properties.Resources.play3;
+            this.MnuStart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MnuStart.Name = "MnuStart";
-            this.MnuStart.Size = new System.Drawing.Size(43, 20);
-            this.MnuStart.Text = "Start";
+            this.MnuStart.Size = new System.Drawing.Size(52, 20);
             this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
+            // 
+            // MnuStop
+            // 
+            this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStop.Image = global::Level1_Dodge.Properties.Resources.pause1;
+            this.MnuStop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuStop.Name = "MnuStop";
+            this.MnuStop.Size = new System.Drawing.Size(62, 20);
+            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
             // FrmDodge
             // 

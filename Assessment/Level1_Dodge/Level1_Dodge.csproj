@@ -107,6 +107,11 @@
     <Content Include="bin\Debug\oxygen9.gif" />
     <Content Include="bin\Debug\oxygengif.gif" />
     <Content Include="bin\Debug\oxygeninc.png" />
+    <None Include="Resources\pause1.png" />
+    <None Include="Resources\play3.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\play2.png" />
+    <None Include="Resources\play1.png" />
     <None Include="Resources\play.png" />
     <None Include="Resources\heart.png" />
     <None Include="Resources\TITLE21.png" />
