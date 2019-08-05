@@ -133,9 +133,49 @@ namespace Level1_Dodge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap oxygen_left {
+            get {
+                object obj = ResourceManager.GetObject("oxygen left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oxygen_left1 {
+            get {
+                object obj = ResourceManager.GetObject("oxygen left1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap oxygengif {
             get {
                 object obj = ResourceManager.GetObject("oxygengif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oxygenleft {
+            get {
+                object obj = ResourceManager.GetObject("oxygenleft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oxygenleft1 {
+            get {
+                object obj = ResourceManager.GetObject("oxygenleft1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Timer TmrBoost;
             this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
             this.LblScore = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrAnim = new System.Windows.Forms.Timer(this.components);
             this.TmrAnim1 = new System.Windows.Forms.Timer(this.components);
             this.TmrCol = new System.Windows.Forms.Timer(this.components);
@@ -49,14 +52,18 @@
             this.LblScore1 = new System.Windows.Forms.TextBox();
             this.TxtLives = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            TmrBoost = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TmrBoost
+            // 
+            TmrBoost.Enabled = true;
+            TmrBoost.Interval = 500;
             // 
             // TmrPlanet
             // 
@@ -86,6 +93,24 @@
             this.menuStrip1.Size = new System.Drawing.Size(584, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MnuStart
+            // 
+            this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStart.Image = global::Level1_Dodge.Properties.Resources.play3;
+            this.MnuStart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuStart.Name = "MnuStart";
+            this.MnuStart.Size = new System.Drawing.Size(52, 20);
+            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
+            // 
+            // MnuStop
+            // 
+            this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStop.Image = global::Level1_Dodge.Properties.Resources.pause1;
+            this.MnuStop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuStop.Name = "MnuStop";
+            this.MnuStop.Size = new System.Drawing.Size(62, 20);
+            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
             // TmrAnim
             // 
@@ -118,6 +143,7 @@
             this.PnlGame.Controls.Add(this.LblScore1);
             this.PnlGame.Controls.Add(this.TxtLives);
             this.PnlGame.Controls.Add(this.pictureBox1);
+            this.PnlGame.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PnlGame.Location = new System.Drawing.Point(0, 27);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(584, 435);
@@ -234,24 +260,6 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // MnuStart
-            // 
-            this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuStart.Image = global::Level1_Dodge.Properties.Resources.play3;
-            this.MnuStart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MnuStart.Name = "MnuStart";
-            this.MnuStart.Size = new System.Drawing.Size(52, 20);
-            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
-            // 
-            // MnuStop
-            // 
-            this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuStop.Image = global::Level1_Dodge.Properties.Resources.pause1;
-            this.MnuStop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MnuStop.Name = "MnuStop";
-            this.MnuStop.Size = new System.Drawing.Size(62, 20);
-            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
-            // 
             // FrmDodge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,13 +306,13 @@
         private System.Windows.Forms.Timer TmrCol;
         private System.Windows.Forms.Label lblOx;
         private System.Windows.Forms.Timer TmrOx;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer TmrOxG;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox heart;
+        private System.Windows.Forms.Label label2;
     }
 }
 

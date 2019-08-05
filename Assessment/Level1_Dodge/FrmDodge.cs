@@ -375,7 +375,7 @@ namespace Level1_Dodge
             }
             oxygen1 = images1[1];
 
-            MessageBox.Show("Space is scary. \n \n You, Astronaut #237, awake without your ship and your oxygen levels are rapidly depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move)", "LOST");
+            MessageBox.Show("Space is scary. \n \n You, Astronaut #237, awake without your ship and your oxygen levels are rapidly depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move, collect O2 to increase your oxygen meter)", "LOST");
             TxtName.Focus();
             MnuStart.Enabled = false;
         }
