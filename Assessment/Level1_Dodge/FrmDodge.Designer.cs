@@ -34,16 +34,15 @@
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
             this.LblScore = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrAnim = new System.Windows.Forms.Timer(this.components);
             this.TmrAnim1 = new System.Windows.Forms.Timer(this.components);
             this.TmrCol = new System.Windows.Forms.Timer(this.components);
             this.TmrOx = new System.Windows.Forms.Timer(this.components);
             this.TmrOxG = new System.Windows.Forms.Timer(this.components);
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.title = new System.Windows.Forms.PictureBox();
             this.heart = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.titlesmall = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
@@ -51,13 +50,18 @@
             this.lblOx = new System.Windows.Forms.Label();
             this.LblScore1 = new System.Windows.Forms.TextBox();
             this.TxtLives = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.circle = new System.Windows.Forms.PictureBox();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.pressplay = new System.Windows.Forms.PictureBox();
             TmrBoost = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.PnlGame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlesmall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pressplay)).BeginInit();
             this.SuspendLayout();
             // 
             // TmrBoost
@@ -94,24 +98,6 @@
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // MnuStart
-            // 
-            this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuStart.Image = global::Level1_Dodge.Properties.Resources.play3;
-            this.MnuStart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MnuStart.Name = "MnuStart";
-            this.MnuStart.Size = new System.Drawing.Size(52, 20);
-            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
-            // 
-            // MnuStop
-            // 
-            this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuStop.Image = global::Level1_Dodge.Properties.Resources.pause1;
-            this.MnuStop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MnuStop.Name = "MnuStop";
-            this.MnuStop.Size = new System.Drawing.Size(62, 20);
-            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
-            // 
             // TmrAnim
             // 
             this.TmrAnim.Interval = 40;
@@ -133,8 +119,10 @@
             this.PnlGame.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.PnlGame.BackgroundImage = global::Level1_Dodge.Properties.Resources.bg;
             this.PnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PnlGame.Controls.Add(this.pressplay);
+            this.PnlGame.Controls.Add(this.title);
             this.PnlGame.Controls.Add(this.heart);
-            this.PnlGame.Controls.Add(this.pictureBox2);
+            this.PnlGame.Controls.Add(this.titlesmall);
             this.PnlGame.Controls.Add(this.label5);
             this.PnlGame.Controls.Add(this.label4);
             this.PnlGame.Controls.Add(this.TxtName);
@@ -142,13 +130,25 @@
             this.PnlGame.Controls.Add(this.lblOx);
             this.PnlGame.Controls.Add(this.LblScore1);
             this.PnlGame.Controls.Add(this.TxtLives);
-            this.PnlGame.Controls.Add(this.pictureBox1);
+            this.PnlGame.Controls.Add(this.circle);
             this.PnlGame.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PnlGame.Location = new System.Drawing.Point(0, 27);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(584, 435);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // title
+            // 
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Image = global::Level1_Dodge.Properties.Resources.TITLE23;
+            this.title.Location = new System.Drawing.Point(176, 148);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(227, 108);
+            this.title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.title.TabIndex = 19;
+            this.title.TabStop = false;
+            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // heart
             // 
@@ -160,17 +160,19 @@
             this.heart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart.TabIndex = 18;
             this.heart.TabStop = false;
+            this.heart.Visible = false;
             // 
-            // pictureBox2
+            // titlesmall
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Level1_Dodge.Properties.Resources.TITLE22;
-            this.pictureBox2.Location = new System.Drawing.Point(242, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 39);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.titlesmall.BackColor = System.Drawing.Color.Transparent;
+            this.titlesmall.Image = global::Level1_Dodge.Properties.Resources.TITLE22;
+            this.titlesmall.Location = new System.Drawing.Point(242, 0);
+            this.titlesmall.Name = "titlesmall";
+            this.titlesmall.Size = new System.Drawing.Size(91, 39);
+            this.titlesmall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.titlesmall.TabIndex = 17;
+            this.titlesmall.TabStop = false;
+            this.titlesmall.Visible = false;
             // 
             // label5
             // 
@@ -193,6 +195,7 @@
             this.label4.Size = new System.Drawing.Size(45, 21);
             this.label4.TabIndex = 14;
             this.label4.Text = "SCORE";
+            this.label4.Visible = false;
             // 
             // TxtName
             // 
@@ -215,6 +218,7 @@
             this.label2.Size = new System.Drawing.Size(86, 21);
             this.label2.TabIndex = 12;
             this.label2.Text = "OXYGEN LEFT:";
+            this.label2.Visible = false;
             // 
             // lblOx
             // 
@@ -226,6 +230,7 @@
             this.lblOx.Size = new System.Drawing.Size(40, 40);
             this.lblOx.TabIndex = 11;
             this.lblOx.Text = "10";
+            this.lblOx.Visible = false;
             // 
             // LblScore1
             // 
@@ -237,6 +242,7 @@
             this.LblScore1.Size = new System.Drawing.Size(68, 45);
             this.LblScore1.TabIndex = 9;
             this.LblScore1.Text = "0";
+            this.LblScore1.Visible = false;
             // 
             // TxtLives
             // 
@@ -248,17 +254,49 @@
             this.TxtLives.Size = new System.Drawing.Size(21, 45);
             this.TxtLives.TabIndex = 6;
             this.TxtLives.Text = "5";
+            this.TxtLives.Visible = false;
             // 
-            // pictureBox1
+            // circle
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Level1_Dodge.Properties.Resources.circle1;
-            this.pictureBox1.Location = new System.Drawing.Point(480, 199);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.circle.BackColor = System.Drawing.Color.Transparent;
+            this.circle.Image = global::Level1_Dodge.Properties.Resources.circle1;
+            this.circle.Location = new System.Drawing.Point(480, 199);
+            this.circle.Name = "circle";
+            this.circle.Size = new System.Drawing.Size(79, 77);
+            this.circle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle.TabIndex = 16;
+            this.circle.TabStop = false;
+            this.circle.Visible = false;
+            // 
+            // MnuStart
+            // 
+            this.MnuStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStart.Image = global::Level1_Dodge.Properties.Resources.play3;
+            this.MnuStart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuStart.Name = "MnuStart";
+            this.MnuStart.Size = new System.Drawing.Size(52, 20);
+            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
+            // 
+            // MnuStop
+            // 
+            this.MnuStop.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuStop.Image = global::Level1_Dodge.Properties.Resources.pause1;
+            this.MnuStop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuStop.Name = "MnuStop";
+            this.MnuStop.Size = new System.Drawing.Size(62, 20);
+            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
+            // 
+            // pressplay
+            // 
+            this.pressplay.BackColor = System.Drawing.Color.Transparent;
+            this.pressplay.Image = global::Level1_Dodge.Properties.Resources.pressplay;
+            this.pressplay.Location = new System.Drawing.Point(170, 262);
+            this.pressplay.Name = "pressplay";
+            this.pressplay.Size = new System.Drawing.Size(227, 25);
+            this.pressplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pressplay.TabIndex = 20;
+            this.pressplay.TabStop = false;
+            this.pressplay.Click += new System.EventHandler(this.pressplay_Click);
             // 
             // FrmDodge
             // 
@@ -281,9 +319,11 @@
             this.menuStrip1.PerformLayout();
             this.PnlGame.ResumeLayout(false);
             this.PnlGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.title)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlesmall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pressplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,10 +349,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer TmrOxG;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox circle;
+        private System.Windows.Forms.PictureBox titlesmall;
         private System.Windows.Forms.PictureBox heart;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox title;
+        private System.Windows.Forms.PictureBox pressplay;
     }
 }
 

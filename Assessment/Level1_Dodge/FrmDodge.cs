@@ -211,7 +211,17 @@ namespace Level1_Dodge
             TmrAnim.Enabled = true;//start the timer to animate the planets
             lblOx.Text = "10"; //start from 10 seconds
             TmrOx.Start();
-
+            title.Visible = false; //hide title card when play is clicked
+            title.Visible = false; //hide title card when play is clicked
+            pressplay.Visible = false; //hide title card when play is clicked
+            titlesmall.Visible = true; //show small title card when play is clicked
+            heart.Visible = true;
+            TxtLives.Visible = true;
+            LblScore1.Visible = true;
+            label4.Visible = true;
+            circle.Visible = true;
+            lblOx.Visible = true;
+            label2.Visible = true;
 
            
 
@@ -270,6 +280,16 @@ namespace Level1_Dodge
             Invalidate();   //refreshes screen otherwise image won't change
 
            
+
+        }
+
+        private void pressplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void title_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -375,7 +395,7 @@ namespace Level1_Dodge
             }
             oxygen1 = images1[1];
 
-            MessageBox.Show("Space is scary. \n \n You, Astronaut #237, awake without your ship and your oxygen levels are rapidly depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move, collect O2 to increase your oxygen meter)", "LOST");
+            MessageBox.Show("Space is scary. \n \n You, Astronaut #237, awake without your ship and your oxygen levels are rapidly depleting. \n Stay alive for as long as you can. \n \n (Use arrow keys to move, collect O2 to increase your oxygen metre)", "LOST");
             TxtName.Focus();
             MnuStart.Enabled = false;
         }
