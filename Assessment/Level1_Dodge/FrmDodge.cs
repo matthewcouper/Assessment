@@ -364,6 +364,7 @@ namespace Level1_Dodge
                 area[i] = new Rectangle(x + 70 * i, y, 30, 30);
                 planetSpeed[i] = speed.Next(5, 10); //each planet has a random speed
             }
+
         }
 
         //the CheckLives method will stop the planets and spaceship moving if there are no lives left
