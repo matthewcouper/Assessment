@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Level1_Dodge", "Level1_Dodge\Level1_Dodge.csproj", "{5877BF24-DFC3-41C5-AED6-527BA3F19055}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment", "Level1_Dodge\Assessment.csproj", "{5877BF24-DFC3-41C5-AED6-527BA3F19055}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
