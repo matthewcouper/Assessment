@@ -14,3 +14,13 @@ C:\Users\matthewcouper\Source\Repos\Assessment\Assessment\Assessment\obj\Debug\A
 C:\Users\matthewcouper\Source\Repos\Assessment5\Assessment\Assessment\bin\Debug\Assessment.exe.config
 C:\Users\matthewcouper\Source\Repos\Assessment5\Assessment\Assessment\obj\Debug\Assessment.exe
 C:\Users\matthewcouper\Source\Repos\Assessment5\Assessment\Assessment\obj\Debug\Assessment.pdb
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\bin\Debug\Assessment.exe.config
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\bin\Debug\Assessment.exe
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\bin\Debug\Assessment.pdb
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.csprojAssemblyReference.cache
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.FrmGame.resources
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.Properties.Resources.resources
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.csproj.GenerateResource.cache
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.csproj.CoreCompileInputs.cache
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.exe
+C:\Users\matthewcouper\Source\Repos\Assessment8\Assessment\Assessment\obj\Debug\Assessment.pdb
