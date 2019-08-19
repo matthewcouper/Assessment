@@ -57,7 +57,7 @@ namespace Level1_Dodge
 
                 if (area[i].Y > PnlGame.Height)
                 {
-                    area[i].Y = 20;
+                    area[i].Y = -30;
                     score += 1; // add 1 to score
                     LblScore1.Text = score.ToString();//display score on the form 
                     LblScore1.ForeColor = Color.Green;
